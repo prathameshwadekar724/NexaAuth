@@ -34,10 +34,11 @@ export async function POST(request) {
 
         resp.cookies.set("token",token,{
             httpOnly:true,
-            secure:process.env.NODE_ENV === "production",
+            secure:true,
             sameSite:"strict",
             maxAge:7*24*60*60,
             path:"/",
+            maxAge:60*60*24
         });
 
         return resp;
