@@ -4,17 +4,22 @@
 import { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 export default function ForgetPasswordPage() {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
-
+  const router = useRouter();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       setLoading(true);
       const res = await axios.post("/api/users/forgotpassword", { email });
       toast.success(res.data.message);
+
+      setTimeout(()=>{
+        router.push("/");
+      },1500);
     } catch (error) {
       console.error(error);
       toast.error(error.response?.data?.message || "Something went wrong");
