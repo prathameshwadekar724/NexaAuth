@@ -1,10 +1,10 @@
 import { Suspense } from "react";
-import VerifyEmailPage from "./VerifyEmailPage";
+import VerifyEmailClient from "./VerifyEmailClient";
 
 export default function Page() {
   return (
     <Suspense fallback={<p>Verifying...</p>}>
-      <VerifyEmailPage />
+      <VerifyEmailClient />
     </Suspense>
   );
 }

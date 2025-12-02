@@ -1,21 +1,19 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-export default function VerifyEmailPage() {
+export default function VerifyEmailClient() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const token = searchParams.get("token");
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const verifyToken = async () => {
+    const verify = async () => {
       if (!token) {
-        toast.error("Invalid verification link");
+        toast.error("Invalid link");
         router.push("/login");
         return;
       }
@@ -23,25 +21,19 @@ export default function VerifyEmailPage() {
       try {
         const res = await axios.post("/api/users/verifyemail", { token });
         toast.success(res.data.message);
-
-        setTimeout(() => {
-          router.push("/login");
-        }, 1500);
-
-      } catch (error) {
-        toast.error(error.response?.data?.message || "Verification failed");
         router.push("/login");
-      } finally {
-        setLoading(false);
+      } catch (error) {
+        toast.error("Invalid or expired link");
+        router.push("/login");
       }
     };
 
-    verifyToken();
+    verify();
   }, [token]);
 
   return (
     <main className="min-h-screen flex items-center justify-center">
-      {loading ? <p className="text-black">Verifying email...</p> : null}
+      <p className="text-black">Verifying...</p>
     </main>
   );
 }
