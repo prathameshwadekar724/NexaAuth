@@ -13,7 +13,7 @@ export default function ForgetPasswordPage() {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await axios.post("/api/users/forgetpassword", { email });
+      const res = await axios.post("/api/users/forgotpassword", { email });
       toast.success(res.data.message);
     } catch (error) {
       console.error(error);

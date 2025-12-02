@@ -59,7 +59,7 @@ export default function LoginPage() {
             </button>
             <p
             className="text-sm text-ceter text-blue-600 cursor-pointer"
-            onClick={()=>router.push("/forgetpassword")}
+            onClick={()=>router.push("/forgotpassword")}
             >
                 Forgot password?
             </p>
