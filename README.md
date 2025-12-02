@@ -107,10 +107,10 @@ src/
 
 | Page               | Screenshot                            |
 | ------------------ | ------------------------------------- |
-| Login Page         | ![login](<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/a188c801-69e2-4355-881d-26b5b20d504a" />)  |      |
-| Register Page      | ![register](<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/b147c2b3-087f-48e0-a17b-ffa7db7368c8" />) |
-| Profile Page       | ![profile](<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/c5e7bc04-658d-4634-b1de-4438b19fe12b" />)   |
-| Forgot Password    | ![forgot](<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/9b8580b3-3b30-4143-8592-180f7072d8d2" />)     |
+| Login Page         | ![login](https://github.com/user-attachments/assets/a188c801-69e2-4355-881d-26b5b20d504a)  |      |
+| Register Page      | ![register](https://github.com/user-attachments/assets/b147c2b3-087f-48e0-a17b-ffa7db7368c8) |
+| Profile Page       | ![profile](https://github.com/user-attachments/assets/c5e7bc04-658d-4634-b1de-4438b19fe12b)   |
+| Forgot Password    | ![forgot](https://github.com/user-attachments/assets/9b8580b3-3b30-4143-8592-180f7072d8d2)     |
 
 ---
 
